@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginBottom="70dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistics"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Period:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/spinner_background"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending by Category (Pie Chart)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/white"
+                android:elevation="4dp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending by Category (Bar Chart)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"
+                android:elevation="4dp"
+                android:padding="8dp"/>
+
+            <!-- Category Totals Section -->
+            <TextView
+                android:id="@+id/tvCategoryTotalsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Totals"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/categoryTotalsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:elevation="2dp"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:elevation="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Home"/>
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/category_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Categories"/>
+
+        <ImageView
+            android:id="@+id/stats_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/graph_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Stats"/>
+
+        <ImageView
+            android:id="@+id/achievements_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/achievements_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Achievements"/>
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Profile"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 

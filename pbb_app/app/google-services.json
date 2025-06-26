@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991949588803",
+    "project_id": "pocket-plan-budget-app",
+    "storage_bucket": "pocket-plan-budget-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991949588803:android:727d793be0c30e476f87f6",
+        "android_client_info": {
+          "package_name": "com.example.pbb_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH213Qcv9RFozjQ6zU5LIfgeLs2vFcehc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991949588803:android:28f87cb16ff4ba196f87f6",
+        "android_client_info": {
+          "package_name": "com.example.yourappname"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH213Qcv9RFozjQ6zU5LIfgeLs2vFcehc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

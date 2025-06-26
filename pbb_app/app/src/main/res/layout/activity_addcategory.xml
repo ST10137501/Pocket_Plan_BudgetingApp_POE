@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Category"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create custom categories to organize your expenses"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:alpha="0.8" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="70dp"
+        android:padding="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Category Icon Selection -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivProfilePicture"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/category_icon"
+                        android:contentDescription="Category Icon"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_background"
+                        android:padding="16dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category Icon"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category Name Input -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category Name"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g., Groceries, Transport, Entertainment"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp"
+                        android:background="@drawable/edittext_background"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:inputType="textCapWords" />
+
+                    <!-- Category Amount -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etCategoryAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter amount (R)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp"
+                        android:background="@drawable/edittext_background"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category Description Input -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etCategoryDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Brief description of this category"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp"
+                        android:background="@drawable/edittext_background"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:inputType="textMultiLine"
+                        android:maxLines="3" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Add Category Button -->
+            <Button
+                android:id="@+id/btnAddCategory"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Add Category"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Category Display -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recent Categories"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryDisplay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your categories will appear here"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_secondary"
+                        android:gravity="center"
+                        android:padding="20dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:elevation="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Home"/>
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/category_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Categories"/>
+
+        <ImageView
+            android:id="@+id/stats_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/graph_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Stats"/>
+
+        <ImageView
+            android:id="@+id/achievements_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/achievements_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Achievements"/>
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Profile"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
